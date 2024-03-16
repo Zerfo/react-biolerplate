@@ -13,9 +13,9 @@
 		"node": ">=18"
 	},
 	"scripts": {
-    "dev": "rsbuild dev",
-    "build": "rsbuild build"
-  },
+		"dev": "cross-env NODE_ENV=development IS_LOGGER=true rsbuild dev",
+		"build": "cross-env NODE_ENV=production IS_LOGGER=false rsbuild build"
+	},
 	"browserslist": [
 		"last 2 versions",
 		"> 1%",
@@ -40,6 +40,7 @@
 		"@types/react": "^18.2.66",
 		"@types/react-dom": "^18.2.22",
 		"@types/redux-logger": "^3.0.13",
+		"cross-env": "^7.0.3",
 		"prop-types": "^15.8.1",
 		"typescript": "^5.4.2"
 	}
