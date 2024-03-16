@@ -14,7 +14,7 @@ export default defineConfig({
 				exportType: 'default',
 			},
 		}),
-		pluginImageCompress(),
+		pluginImageCompress([{ use: 'jpeg', test: /\.(?:jpg|jpeg|jpe)$/ }, 'ico']),
 		pluginTypeCheck({
 			enable: process.env.NODE_ENV === 'development',
 		}),
