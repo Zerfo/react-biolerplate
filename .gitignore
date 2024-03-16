@@ -1,0 +1,28 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+/cypress/screenshots
+junit.xml
+
+#misc
+.DS_Store
+.idea
+
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+
+yarn-debug.log*
+yarn-error.log*
+
+npm-debug.log*
+npm-error.log*
