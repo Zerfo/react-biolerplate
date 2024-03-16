@@ -8,6 +8,10 @@
 /cypress/screenshots
 junit.xml
 
+# builds
+/dist
+/build
+
 #misc
 .DS_Store
 .idea
