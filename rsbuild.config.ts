@@ -1,6 +1,5 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginAssetsRetry } from '@rsbuild/plugin-assets-retry';
-import { pluginCheckSyntax } from '@rsbuild/plugin-check-syntax';
 import { pluginImageCompress } from '@rsbuild/plugin-image-compress';
 import { pluginReact } from '@rsbuild/plugin-react';
 import { pluginSvgr } from '@rsbuild/plugin-svgr';
@@ -17,9 +16,6 @@ export default defineConfig({
 		pluginImageCompress([{ use: 'jpeg', test: /\.(?:jpg|jpeg|jpe)$/ }, 'ico']),
 		pluginTypeCheck({
 			enable: process.env.NODE_ENV === 'development',
-		}),
-		pluginCheckSyntax({
-			targets: ['chrome >= 53'],
 		}),
 		pluginAssetsRetry({
 			onRetry: ({ times, domain, url, tagName }) => {
