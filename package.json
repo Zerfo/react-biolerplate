@@ -12,7 +12,10 @@
 		"npm": ">=9",
 		"node": ">=18"
 	},
-	"scripts": {},
+	"scripts": {
+    "dev": "rsbuild dev",
+    "build": "rsbuild build"
+  },
 	"browserslist": [
 		"last 2 versions",
 		"> 1%",
@@ -27,8 +30,15 @@
 		"redux-logger": "^3.0.6"
 	},
 	"devDependencies": {
-		"@types/react-dom": "^18.2.22",
+		"@rsbuild/core": "^0.4.15",
+		"@rsbuild/plugin-assets-retry": "^0.4.15",
+		"@rsbuild/plugin-check-syntax": "^0.4.15",
+		"@rsbuild/plugin-image-compress": "^0.4.15",
+		"@rsbuild/plugin-react": "^0.4.15",
+		"@rsbuild/plugin-svgr": "^0.4.15",
+		"@rsbuild/plugin-type-check": "^0.4.15",
 		"@types/react": "^18.2.66",
+		"@types/react-dom": "^18.2.22",
 		"@types/redux-logger": "^3.0.13",
 		"prop-types": "^15.8.1",
 		"typescript": "^5.4.2"
