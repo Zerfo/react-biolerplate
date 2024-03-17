@@ -1,63 +1,64 @@
 {
-	"name": "react-biolerplate",
-	"version": "1.0.0",
-	"description": "React application boilerplate a focus on performance and best practices",
-	"repository": {
-		"type": "git",
-		"url": ""
-	},
-	"author": "Nikolay Smekalin <nikolay.smekalin@gmail.com>",
-	"license": "MIT",
-	"engines": {
-		"npm": ">=9",
-		"node": ">=18"
-	},
-	"scripts": {
-		"dev": "cross-env NODE_ENV=development IS_LOGGER=true rsbuild dev",
-		"build": "cross-env NODE_ENV=production IS_LOGGER=false rsbuild build",
-		"check:ts": "tsc -p tsconfig.json --noEmit",
-		"lint": "npm run lint:ts && npm run lint:style",
-		"lint:ts": "eslint --ext .ts,.tsx src/",
-		"lint:ts-fix": "eslint --ext .ts,.tsx src/ --fix"
-	},
-	"browserslist": [
-		"last 2 versions",
-		"> 1%",
-		"IE 10"
-	],
-	"dependencies": {
-		"@reduxjs/toolkit": "^2.2.1",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-redux": "^9.1.0",
-		"react-router-dom": "^6.22.3",
-		"redux-logger": "^3.0.6"
-	},
-	"devDependencies": {
-		"@rsbuild/core": "^0.4.15",
-		"@rsbuild/plugin-assets-retry": "^0.4.15",
-		"@rsbuild/plugin-image-compress": "^0.4.15",
-		"@rsbuild/plugin-react": "^0.4.15",
-		"@rsbuild/plugin-svgr": "^0.4.15",
-		"@rsbuild/plugin-type-check": "^0.4.15",
-		"@types/react-dom": "^18.2.22",
-		"@types/react": "^18.2.66",
-		"@types/redux-logger": "^3.0.13",
-		"@typescript-eslint/eslint-plugin": "6.7.0",
-		"@typescript-eslint/parser": "6.7.0",
-		"cross-env": "^7.0.3",
-		"eslint-config-airbnb": "19.0.4",
-		"eslint-config-prettier": "9.0.0",
-		"eslint-import-resolver-typescript": "3.6.0",
-		"eslint-plugin-import": "2.28.1",
-		"prettier": "3.0.3",
-		"prettier-eslint": "15.0.1",
-		"eslint-plugin-jsx-a11y": "6.7.1",
-		"eslint-plugin-prettier": "5.0.0",
-		"eslint-plugin-react-hooks": "4.6.0",
-		"eslint-plugin-react": "7.33.2",
-		"eslint": "8.49.0",
-		"prop-types": "^15.8.1",
-		"typescript": "^5.4.2"
-	}
+  "name": "react-biolerplate",
+  "version": "1.0.0",
+  "description": "React application boilerplate a focus on performance and best practices",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Nikolay Smekalin <nikolay.smekalin@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "npm": ">=9",
+    "node": ">=18"
+  },
+  "scripts": {
+    "install": "yarn && husky",
+    "dev": "cross-env NODE_ENV=development IS_LOGGER=true rsbuild dev",
+    "build": "cross-env NODE_ENV=production IS_LOGGER=false rsbuild build",
+    "check:ts": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint --ext .ts,.tsx src/",
+    "lint:ts-fix": "eslint --ext .ts,.tsx src/ --fix"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "IE 10"
+  ],
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
+    "react-router-dom": "^6.22.3",
+    "redux-logger": "^3.0.6"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^0.4.15",
+    "@rsbuild/plugin-assets-retry": "^0.4.15",
+    "@rsbuild/plugin-image-compress": "^0.4.15",
+    "@rsbuild/plugin-react": "^0.4.15",
+    "@rsbuild/plugin-svgr": "^0.4.15",
+    "@rsbuild/plugin-type-check": "^0.4.15",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@types/redux-logger": "^3.0.13",
+    "@typescript-eslint/eslint-plugin": "6.7.0",
+    "@typescript-eslint/parser": "6.7.0",
+    "cross-env": "^7.0.3",
+    "eslint": "8.49.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-import-resolver-typescript": "3.6.0",
+    "eslint-plugin-import": "2.28.1",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-prettier": "5.0.0",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "^9.0.11",
+    "prettier": "3.0.3",
+    "prettier-eslint": "15.0.1",
+    "prop-types": "^15.8.1",
+    "typescript": "^5.4.2"
+  }
 }
