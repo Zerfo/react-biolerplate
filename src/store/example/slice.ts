@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 import { toggleFetch } from './thunks';
 
@@ -14,14 +14,13 @@ const exampleSlice = createSlice({
   reducers: {
     toggleFetching: (state, action) => {
       state.isFetching = action.payload;
-    }
+    },
   },
   extraReducers: (builder) => {
-    builder
-      .addCase(toggleFetch.fulfilled, (state, action) => {
-        state.isFetching = action.payload;
-      });
-  }
+    builder.addCase(toggleFetch.fulfilled, (state, action) => {
+      state.isFetching = action.payload;
+    });
+  },
 });
 
 export default exampleSlice.reducer;

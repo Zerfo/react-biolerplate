@@ -21,11 +21,7 @@ function App() {
     }
   }, [breakpoints]);
 
-  return (
-    <Suspense fallback={<div>....Loading</div>}>
-      {loyoutSwitch}
-    </Suspense>
-  );
+  return <Suspense fallback={<div>....Loading</div>}>{loyoutSwitch}</Suspense>;
 }
 
 export default memo(App);

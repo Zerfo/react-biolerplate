@@ -1,6 +1,6 @@
-import { memo } from "react";
+import { memo } from 'react';
 
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 
 import styles from './Layout.module.scss';
 

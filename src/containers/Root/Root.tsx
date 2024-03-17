@@ -9,12 +9,12 @@ import { store } from 'store';
 
 function Root() {
   return (
-		<ErrorCatcher>
-			<Provider store={store}>
-				<BrowserRouter>Hello world!</BrowserRouter>
-			</Provider>
-		</ErrorCatcher>
-	);
+    <ErrorCatcher>
+      <Provider store={store}>
+        <BrowserRouter>Hello world!</BrowserRouter>
+      </Provider>
+    </ErrorCatcher>
+  );
 }
 
 export default memo(Root);

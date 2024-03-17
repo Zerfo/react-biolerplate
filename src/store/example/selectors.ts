@@ -6,5 +6,5 @@ export const exampleSelector = (state: RootState) => state.example;
 
 export const isFetchingSelector = createSelector(
   exampleSelector,
-  (exampleSelector) => exampleSelector.isFetching
+  (exampleState) => exampleState.isFetching,
 );

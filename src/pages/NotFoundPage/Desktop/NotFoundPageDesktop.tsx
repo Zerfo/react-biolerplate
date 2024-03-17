@@ -6,4 +6,4 @@ function NotFoundDesktop() {
   return <div className={styles.wrapper}>NotFoundDesktop</div>;
 }
 
-export default memo(NotFoundDesktop)
+export default memo(NotFoundDesktop);

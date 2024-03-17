@@ -1,38 +1,43 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ErrorInfo, memo, PropsWithChildren, PureComponent } from 'react';
 
 interface SomeError extends Error {
-	message: string;
+  message: string;
 }
 interface ErrorCatcherState {
-	error?: SomeError | null;
+  error?: SomeError | null;
 }
 
 class ErrorCatcher extends PureComponent<
-	PropsWithChildren<{}>,
-	ErrorCatcherState
+  PropsWithChildren<Record<string, any>>,
+  ErrorCatcherState
 > {
-	state = {
-		error: null,
-	};
+  constructor(props: PropsWithChildren<Record<string, any>>) {
+    super(props);
 
-	componentDidCatch(error: SomeError, info: ErrorInfo) {
-		console.error({ error, info });
-	}
+    this.state = {
+      error: null,
+    };
+  }
 
-	static getDerivedStateFromError(error: SomeError) {
-		return { error };
-	}
+  componentDidCatch(error: SomeError, info: ErrorInfo) {
+    console.error({ error, info });
+  }
 
-	render() {
-		const { error } = this.state;
-		const { children } = this.props;
+  static getDerivedStateFromError(error: SomeError) {
+    return { error };
+  }
 
-		if (error) {
+  render() {
+    const { error } = this.state;
+    const { children } = this.props;
+
+    if (error) {
       return <div>{JSON.stringify(error)}</div>;
-		}
+    }
 
-		return children;
-	}
+    return children;
+  }
 }
 
 export default memo(ErrorCatcher);

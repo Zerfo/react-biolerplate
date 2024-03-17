@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
+// eslint-disable-next-line no-shadow
 export enum BreakPoints {
   DESKTOP = 'desktop',
   TABLET = 'tablet',
@@ -7,9 +8,9 @@ export enum BreakPoints {
 }
 
 const defaultConfiguration = {
-	[BreakPoints.DESKTOP]: [992, 7680],
-	[BreakPoints.TABLET]: [601, 991],
-	[BreakPoints.MOBILE]: [0, 600],
+  [BreakPoints.DESKTOP]: [992, 7680],
+  [BreakPoints.TABLET]: [601, 991],
+  [BreakPoints.MOBILE]: [0, 600],
 };
 
 function useBreakpoints(config = defaultConfiguration) {
@@ -39,7 +40,7 @@ function useBreakpoints(config = defaultConfiguration) {
     }
 
     return () => window.removeEventListener('resize', handleResize);
-  }, [windowSize]);
+  }, [config, windowSize]);
 
   return breakpoint;
 }

@@ -10,21 +10,21 @@ const RootPageMobile = lazy(() => import('pages/RootPage/Mobile'));
 const NotFoundPageMobile = lazy(() => import('pages/NotFoundPage/Mobile'));
 
 function RouterMobile() {
-	useEffect(() => {
-		window.addEventListener('offline', () => {
-			console.error('Connection error, check your network connection');
-		});
-	}, []);
+  useEffect(() => {
+    window.addEventListener('offline', () => {
+      console.error('Connection error, check your network connection');
+    });
+  }, []);
 
-	return (
-		<Routes>
-			<Route element={<Layout />}>
-				<Route path={APP_ROUTES.ROOT} element={<RootPageMobile />} />
+  return (
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path={APP_ROUTES.ROOT} element={<RootPageMobile />} />
 
-				<Route path="*" element={<NotFoundPageMobile />} />
-			</Route>
-		</Routes>
-	);
+        <Route path="*" element={<NotFoundPageMobile />} />
+      </Route>
+    </Routes>
+  );
 }
 
 export default memo(RouterMobile);

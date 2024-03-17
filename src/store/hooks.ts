@@ -14,7 +14,7 @@ const rootActions = {
 };
 
 const rootThunks = {
-	...exampleThunks,
+  ...exampleThunks,
 };
 
 export const useAppDispatch: () => AppDispatch = useDispatch;
@@ -30,4 +30,4 @@ export const useThunks = () => {
   const dispatch = useAppDispatch();
 
   return useMemo(() => bindActionCreators(rootThunks, dispatch), [dispatch]);
-}
+};
