@@ -1,1 +1,3 @@
-export const ROOR = '/';
+export enum ROUTES {
+  ROOT = '/',
+}
