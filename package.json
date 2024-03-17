@@ -13,12 +13,12 @@
     "node": ">=18"
   },
   "scripts": {
-    "install": "yarn && husky",
     "dev": "cross-env NODE_ENV=development IS_LOGGER=true rsbuild dev",
     "build": "cross-env NODE_ENV=production IS_LOGGER=false rsbuild build",
     "check:ts": "tsc -p tsconfig.json --noEmit",
     "lint": "eslint --ext .ts,.tsx src/",
-    "lint:ts-fix": "eslint --ext .ts,.tsx src/ --fix"
+    "lint:ts-fix": "eslint --ext .ts,.tsx src/ --fix",
+    "husky:prepare": "husky"
   },
   "browserslist": [
     "last 2 versions",
